@@ -1,0 +1,110 @@
+/* RESET ESTILOS */
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    }
+.partidos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+}
+.primerafecha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    columns: 1;
+    border: red solid 2px;
+    margin: 30px;
+}
+.segundafecha {
+    columns: 2;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    border: red solid 2px;
+    margin: 30px;
+}
+.tercerafecha {
+    columns: 3;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    border: red solid 2px;
+    margin: 30px;
+}
+
+
+.primerPartido {
+display: flex;
+    flex-direction: row; 
+    font-size: 1.5rem;
+}
+.segundoPartido {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+}
+.tercerPartido {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+}
+.cuartoPartido {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+}
+.quintoPartido {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+}
+.sextoPartido {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    
+}
+
+.izquierdo {
+    display: flex;
+    margin: 30px;
+    text-align: center;
+}
+.derecho {
+    display: flex;
+    margin: 30px;
+    text-align: center;
+}
+
+.tabla {
+    border: 5px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    display: grid;
+    align-items: center;
+    align-content: center;
+
+}
+.tablaPosiciones {
+    border: 5px solid red;
+    padding: 20px;
+    font-size: 2rem;
+    margin: 20px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    border-spacing: 25px 10px;
+}

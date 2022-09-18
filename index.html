@@ -1,150 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+  <title>Home</title>  
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EEn este pagina se puede simular los resultados del mundial para ver quien sale campeón"">
+  <meta name="keywords" content="Futbol, Mundial, Qatar 2022">
+  <meta name="robots" content="index"/>
+  <meta name="author" content="Martin Wittmann">
+  <meta property="og:title" content="Encontra tu diseño" />
+  <meta property="og:type" content="En este pagina se puede simular los resultados del mundial para ver quien sale campeón">
+  <meta property="og:url" content=">
+  <meta property="og:image" content=">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
-</head>
-<body>
-<header>
-    <a class="cabeceraLogo" title="HOME" href="index.html"><img src="./imagenes/qatar.jpg" alt="logoqatar" /></a>
-</header>
-<!-- PRIMERA FECHA-->
-<main id="contenido">
-  <h2>GRUPO C</h2>
-  <div class="partidos">
-        <section class="primerafecha">
-            <h2>Primera Fecha</h2>
-            <div class="primerPartido">
-            <div class="izquierdo">
-              <figure><img src="./imagenes/arg.png" alt="escudoargentina"><figcaption>Argentina</figcaption></figure>
-              <input type="text" name="EQUIPOLOCAL1" id="EQUIPOLOCAL1" value="" data-id=1 placeholder="0">
-              <input type="text" name="teamlocal1" id="teamlocal1" class="desaparecer" placeholder="0" readonly>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="index.js">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="icon" href="./imagenes/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <title>Simulador del Mundial</title>
+  <header>
+    <section id="cabecera__mobile">
+        <nav>
+            <div class="navbar">
+                <div class="container nav-container">
+                    <input class="checkbox" type="checkbox" name="MENU"/>
+                    <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>  
+                    <div class="menu-items">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./trabajos.html">Fixture</a></li>
+                        <li><a href="./servicios.html">Estadios</a></li>
+                        <li><a href="./simulador.html">Simulador de partidos</a></li>
+                        <li><a href="./about.html">Ropa</a></li>
+                        <li><a href="./contactanos.html">Contacto</a></li>
+                    </div>
+                </div>
             </div>
-            <div class="derecho">
-              <figure><img src="./imagenes/ars.png"alt="escudoarabia"><figcaption>A. Saudita</figcaption></figure>
-              <input type="text" name="EQUIPOVISITANTE1" id="EQUIPOVISITANTE1" data-id=1 placeholder="0">
-              <input type="text" name="teamvisita1" id="teamvisita1" class="desaparecer" placeholder="0" readonly>
+            <div id="logo">
+              <a class="cabeceraLogo" title="HOME" href="index.html"><img src="./imagenes/qatar.jpg" alt="logoqatar" /></a>
             </div>
-          </div>
-          <div class="segundoPartido">
-            <div class="izquierdo">
-              <figure><img src="./imagenes/mex.png" alt="escudomexico"><figcaption>Mexico</figcaption></figure>
-              <input type="text" name="EQUIPOLOCAL2" id="EQUIPOLOCAL2" data-id=2 placeholder="0">
-              <input type="text" name="teamlocal2" id="teamlocal2" class="desaparecer" placeholder="0" readonly>
-            </div>
-            <div class="derecho">
-              <figure><img src="./imagenes/pol.png"alt="escudopolonia"><figcaption>Polonia</figcaption></figure>
-              <input type="text" name="EQUIPOVISITANTE2" id="EQUIPOVISITANTE2" data-id=2 placeholder="0">
-              <input type="text" name="teamvisita2" id="teamvisita2" class="desaparecer" placeholder="0" readonly>
-            </div>
-          </div>
-  </section>
-<!-- SEGUNDA FECHA-->
-<section class="segundafecha">
-  <h2>Segunda Fecha</h2>
-  <div class="tercerPartido">
-    <div class="izquierdo">
-      <figure><img src="./imagenes/arg.png" alt="escudoargentina"><figcaption>Argentina</figcaption></figure>
-      <input type="text" name="EQUIPOLOCAL3" id="EQUIPOLOCAL3" value="" data-id=3 placeholder="0">
-      <input type="text" name="teamlocal3" id="teamlocal3" class="desaparecer" placeholder="0" readonly>
-    </div>
-    <div class="derecho">
-      <figure><img src="./imagenes/mex.png" alt="escudomexico"><figcaption>Mexico</figcaption></figure>
-      <input type="text" name="EQUIPOVISITANTE3" id="EQUIPOVISITANTE3" data-id=3 placeholder="0">
-      <input type="text" name="teamvisita3" id="teamvisita3" class="desaparecer" placeholder="0" readonly>
-    </div>
-  </div>
-    <div class="cuartoPartido">
-      <div class="izquierdo">
-        <figure><img src="./imagenes/ars.png"alt="escudoarabia"><figcaption>A. Saudita</figcaption></figure>
-        <input type="text" name="EQUIPOLOCAL4" id="EQUIPOLOCAL4" value="" data-id=4 placeholder="0"></td>
-        <input type="text" name="teamlocal4" id="teamlocal4" class="desaparecer" placeholder="0" readonly>
-      </div>
-      <div class="derecho">
-        <figure><img src="./imagenes/pol.png"alt="escudopolonia"><figcaption>Polonia</figcaption></figure>
-        <input type="text" name="EQUIPOVISITANTE4" id="EQUIPOVISITANTE4" data-id=4 placeholder="0">
-        <input type="text" name="teamvisita4" id="teamvisita4" class="desaparecer" placeholder="0" readonly>
-      </div>
-    </div>
-  </section>
-<!-- TERCERA FECHA-->
-<section class="tercerafecha">
-  <h2>Tercera Fecha</h2>
-  <div class="quintoPartido">
-    <div class="izquierdo">
-      <figure><img src="./imagenes/arg.png" alt="escudoargentina"><figcaption>Argentina</figcaption></figure>
-      <input type="text" name="EQUIPOLOCAL5" id="EQUIPOLOCAL5" value="" data-id=5 placeholder="0">
-      <input type="text" name="teamlocal5" id="teamlocal5" class="desaparecer" placeholder="0" readonly>
-    </div>
-    <div class="derecho">
-        <figure><img src="./imagenes/pol.png"alt="escudopolonia"><figcaption>Polonia</figcaption></figure>
-        <input type="text" name="EQUIPOVISITANTE5" id="EQUIPOVISITANTE5" data-id=5 placeholder="0">
-        <input type="text" name="teamvisita5" id="teamvisita5" class="desaparecer" placeholder="0" readonly>
-    </div>
-  </div>
-  <div class="sextoPartido">
-    <div class="izquierdo">    
-      <figure><img src="./imagenes/mex.png" alt="escudomexico"><figcaption>Mexico</figcaption></figure>
-      <input type="text" name="EQUIPOLOCAL6" id="EQUIPOLOCAL6" value="" data-id=6 placeholder="0">
-      <td><input type="text" name="teamlocal6" id="teamlocal6" class="desaparecer" placeholder="0" readonly>
-    </div>
-    <div class="derecho">
-        <figure><img src="./imagenes/ars.png"alt="escudoarabia"><figcaption>A. Saudita</figcaption></figure>
-        <input type="text" name="EQUIPOVISITANTE6" id="EQUIPOVISITANTE6" data-id=6 placeholder="0">
-        <input type="text" name="teamvisita6" id="teamvisita6" class="desaparecer" placeholder="0" readonly>
-    </div>
-  </div>
-</section>
-</div>
-
-<div>
-  <table class="tabla">
-      <caption>Tabla de Posiciones</caption>
-          <tbody class="tablaPosiciones">
-              <tr>
-                  <th></th>
-                  <th>PTOS</th>
-                  <th>GF</th>
-                  <th>GC</th>
-                  <th>DIF</th>
-              </tr>
-              <tr>
-                  <th>Argentina</th>
-                  <td id="ptosarg">0</td>
-                  <td id="golesarg">0</td>
-                  <td id="golesconarg">0</td>
-                  <td id="difgolarg">0</td>
-              </tr>
-              <tr>
-                  <th>Arabia Saudita</th>
-                  <td id="ptosars">0</td>
-                  <td id="golesars">0</td>
-                  <td id="golesconars">0</td>
-                  <td id="difgolars">0</td>
-              </tr>
-              <tr>
-                  <th>Mexico</th>
-                  <td id="ptosmex">0</td>
-                  <td id="golesmex">0</td>
-                  <td id="golesconmex">0</td>
-                  <td id="difgolmex">0</td>
-              </tr>
-              <tr>
-                    <th>Polonia</th>
-                    <td id="ptospol">0</td>
-                    <td id="golespol">0</td>
-                    <td id="golesconpol">0</td>
-                    <td id="difgolpol">0</td>
-              </tr>
-          </tbody>
-        </table>
-</div>
-</footer>
-</main>
-  <script src="./index.js"></script>
-</body>
+        </nav>
+    </section>
+    <section id="cabecera__desktop">
+        <div class="containerfluid">
+        <nav class="">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="./trabajos.html">Fixture</a></li>
+                <li class="nav-item"><a class="nav-link" href="./servicios.html">Estadios</a></li>
+                <a class="cabeceraLogo" title="HOME" href="index.html"><img src="./imagenes/qatar.jpg" alt="logoqatar" /></a>
+                <li class="nav-item"><a class="nav-link" href="./simulador.html">Simulador de partidos</a></li>
+                <li class="nav-item"><a class="nav-link" href="./about.html">Ropa</a></li>
+                <li class="nav-item"><a class="nav-link" href="./contactanos.html">Contacto</a></li>
+            </ul>
+        </nav>
+        </div>
+    </section>
+  </header>
 </html>

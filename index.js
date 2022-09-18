@@ -1,33 +1,68 @@
-suma = parseInt(campo1.value) + parseInt(campo2.value);
+$(document).on('ready', constructor);
+function constructor()
+{
+  $('#contenido input:not([readonly])').change( function (e) {
+    let id = $(this).data('id'); 
+    if(!id) return; 
+    let num2 = parseInt( $('#EQUIPOVISITANTE'+id).val() );
+    let num1 = parseInt( $('#EQUIPOLOCAL'+id).val() );
+    if (num1 > num2) {
+      local = 3;
+      visitante = 0;
+      }
+      else if (num1 < num2) {
+      local = 0;
+      visitante = 3;
+      }
+      else {
+      local = 1;
+      visitante = 1;
+      }
+    let resultadolocal = local
+    $('#teamlocal'+id).val(resultadolocal);
+    let resultadovisitante = visitante
+    $('#teamvisita'+id).val(resultadovisitante);
+    console.log(parseInt(teamlocal1.value));
+    //CALCULO PUNTOS
+    ptosarg.innerText = parseInt(teamlocal1.value) + parseInt(teamlocal3.value) + parseInt(teamlocal5.value)
+    ptosars.innerText = parseInt(teamvisita1.value) + parseInt(teamlocal4.value) + parseInt(teamvisita6.value)
+    ptosmex.innerText = parseInt(teamvisita3.value) + parseInt(teamvisita3.value) + parseInt(teamlocal6.value)
+    ptospol.innerText = parseInt(teamvisita2.value) + parseInt(teamvisita4.value) + parseInt(teamvisita5.value)
+    //CALCULO GOLES A FAVOR
+    golesarg.innerText = parseInt(EQUIPOLOCAL1.value) + parseInt(EQUIPOLOCAL3.value) + parseInt(EQUIPOLOCAL5.value)
+    golesars.innerText = parseInt(EQUIPOVISITANTE1.value) + parseInt(EQUIPOLOCAL4.value) + parseInt(EQUIPOVISITANTE6.value)
+    golesmex.innerText = parseInt(EQUIPOLOCAL2.value) + parseInt(EQUIPOVISITANTE3.value) + parseInt(EQUIPOLOCAL6.value)
+    golespol.innerText = parseInt(EQUIPOVISITANTE4.value) + parseInt(EQUIPOVISITANTE4.value) + parseInt(EQUIPOVISITANTE5.value)
+    //CALCULO GOLES EN CONTRA
+    golesconarg.innerText = parseInt(EQUIPOVISITANTE1.value) + parseInt(EQUIPOVISITANTE3.value) + parseInt(EQUIPOLOCAL5.value)
+    golesconars.innerText = parseInt(EQUIPOVISITANTE1.value) + parseInt(EQUIPOVISITANTE4.value) + parseInt(EQUIPOVISITANTE6.value)
+    golesconmex.innerText = parseInt(EQUIPOVISITANTE2.value) + parseInt(EQUIPOLOCAL3.value) + parseInt(EQUIPOVISITANTE6.value)
+    golesconpol.innerText = parseInt(EQUIPOLOCAL2.value) + parseInt(EQUIPOLOCAL4.value) + parseInt(EQUIPOLOCAL5.value)
+    //DIFERENCIA GOLES
+    difgolarg.innerText = parseInt(golesarg.innerText) - parseInt(golesconarg.innerText)
+    difgolars.innerText = parseInt(golesars.innerText) - parseInt(golesconars.innerText)
+    difgolmex.innerText = parseInt(golesmex.innerText) - parseInt(golesconmex.innerText)
+    difgolpol.innerText = parseInt(golespol.innerText) - parseInt(golesconpol.innerText)
+    
+  });}
 
-document.write(suma);
 
-let input1  = document.getElementById("arg0")
-input1.addEventListener("input", () => {
-     console.log(input1.value)
-})
-let input2  = document.getElementById("arg00")
-input2.addEventListener("input", () => {
-     console.log(input2.value)
-})
-let input3  = document.getElementById("arg000")
-input3.addEventListener("input", () => {
-     console.log(input3.value)
-})
+
+
+
 
 //GOLES ARGENTINA
 arg0.addEventListener("keydown",golesArgentina)
 function golesArgentina (event) {   
-    const totalGolesArg = event.key;
+    totalGolesArg = event.key;
     golesA0.innerText = event.key
     console.log(totalGolesArg);
 /*     if (totalGolesArg != "0") {
         golesArg.innerText = event.key;
     } */}
-    
 arg00.addEventListener("keydown",golesArgentina1)
 function golesArgentina1 (event) {
-    let totalGolesArg1 = event.key;
+    totalGolesArg1 = event.key;
     golesA1.innerText = event.key
     console.log(totalGolesArg1);
 /*     if (totalGolesArg1 != "0") {
@@ -35,16 +70,17 @@ function golesArgentina1 (event) {
     } */}
 arg000.addEventListener("keydown",golesArgentina2)
 function golesArgentina2 (event) {
-    let totalGolesArg2 = event.key;
+    totalGolesArg2 = event.key;
     golesA2.innerText = event.key
     console.log(totalGolesArg2);
 /*     if (totalGolesArg != "0") {
         golesArg.innerText = event.key;
     } */}
-let golesASF = arg00.addEventListener("keydown",golesArgentina1)
-let golesATF = arg000.addEventListener("keydown",golesArgentina2)
+let argentinaGoles1 = document.getElementById("golesA0").innerHTML;
+console.log(argentinaGoles1);
 
-arg0.addEventListener("keydown",golesArgentina)
+
+
 
 function sumar(){
     var numero1 = document.getElementById("golesA2");
